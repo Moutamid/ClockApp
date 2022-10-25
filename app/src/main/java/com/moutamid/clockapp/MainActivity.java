@@ -2,8 +2,10 @@ package com.moutamid.clockapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AnalogClock;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -11,19 +13,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    TextView hourTV, minTV, secTV, dateTV;
-    AnalogClock clock;
+    TextView dateTV;
+    Button donate, privacy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //clock = findViewById(R.id.analogClock);
-//        hourTV = findViewById(R.id.hourTV);
-//        minTV = findViewById(R.id.minTV);
-//        secTV = findViewById(R.id.secTV);
         dateTV = findViewById(R.id.date);
+        donate = findViewById(R.id.donate);
+        privacy = findViewById(R.id.privacy);
+
+        donate.setOnClickListener(v -> {
+            startActivity(new Intent(this, DonateActivity.class));
+        });
 
 //        "EEE, MMM d, ''yy"
         DateFormat dateFormat = new SimpleDateFormat("EEE, dd/MMM/yyyy");

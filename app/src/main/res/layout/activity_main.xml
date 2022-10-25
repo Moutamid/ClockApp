@@ -43,4 +43,36 @@
         android:text="Sat, 11/12/2022"
         android:fontFamily="@font/abril" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:text="Privacy Policy"
+            android:backgroundTint="@color/grey"/>
+        
+        <Button
+            android:id="@+id/donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="Clock"
+            android:backgroundTint="@color/purLight" />
+
+    </LinearLayout>
+
 </LinearLayout>
