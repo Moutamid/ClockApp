@@ -3,6 +3,7 @@ package com.moutamid.clockapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.AnalogClock;
 import android.widget.Button;
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         donate.setOnClickListener(v -> {
             startActivity(new Intent(this, DonateActivity.class));
+        });
+
+        privacy.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/document/d/e/2PACX-1vQC-Nxdp9uSS3ih36UlWih9yYGh3AuXJGaYLZn-acpp_Uzsl53zLXnPDuJcwWmXkjKhvrljAHq1LwWD/pub"));
+            startActivity(browserIntent);
         });
 
 //        "EEE, MMM d, ''yy"
